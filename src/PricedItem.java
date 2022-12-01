@@ -1,2 +1,6 @@
-package PACKAGE_NAME;public interface PricedItem {
+public interface PricedItem<T extends Number> {
+
+    T getPrice();
+
+    void setPrice(T price);
 }

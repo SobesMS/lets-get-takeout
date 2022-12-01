@@ -1,2 +1,4 @@
-package PACKAGE_NAME;public class IntUserInputRetriever {
+public interface IntUserInputRetriever<T> {
+
+    T produceOutputOnIntUserInput(int selection) throws IllegalArgumentException;
 }
