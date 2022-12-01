@@ -2,7 +2,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ShoppingBag<T extends PricedItem<Integer>> {
-    private Map<T, Integer> shoppingBag;
+    private final Map<T, Integer> shoppingBag;
 
     public ShoppingBag() {
         this.shoppingBag = new HashMap<>();
@@ -24,5 +24,9 @@ public class ShoppingBag<T extends PricedItem<Integer>> {
             totalPrice = totalPrice + (item.getPrice() * pair.getValue());
         }
         return totalPrice;
+    }
+
+    public boolean isBagEmpty() {
+        return this.shoppingBag.isEmpty();
     }
 }

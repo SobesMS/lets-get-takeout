@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FoodMenu {
-    private List<Food> menu;
+    private final List<Food> menu;
 
     public FoodMenu() {
         this.menu = new ArrayList<>();
@@ -14,8 +14,11 @@ public class FoodMenu {
     @Override
     public String toString() {
         StringBuilder str = new StringBuilder();
-        for (int i = 1; i <= menu.size(); i++) {
-            str.append(i).append(menu.get(i).toString()).append("\n");
+        for (int i = 0; i < menu.size(); i++) {
+            str.append(i + 1);
+            str.append(" - ");
+            str.append(menu.get(i).toString());
+            str.append("\n");
         }
         return str.toString();
     }
@@ -28,17 +31,7 @@ public class FoodMenu {
         }
     }
 
-    public Food getLowestCostFood() {
-        Food food = null;
-        for (Food item : menu) {
-            if (food == null) {
-                food = item;
-            } else {
-                if (item.getPrice() < food.getPrice()) {
-                    food = item;
-                }
-            }
-        }
-        return food;
+    public int getMenuItemCount() {
+        return menu.size();
     }
 }
