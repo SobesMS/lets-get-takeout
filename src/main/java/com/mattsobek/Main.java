@@ -1,3 +1,5 @@
+package com.mattsobek;
+
 import java.util.Scanner;
 
 public class Main {

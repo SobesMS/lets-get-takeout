@@ -1,3 +1,5 @@
+package com.mattsobek;
+
 import java.util.HashMap;
 import java.util.Map;
 

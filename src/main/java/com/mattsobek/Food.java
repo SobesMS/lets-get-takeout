@@ -1,3 +1,5 @@
+package com.mattsobek;
+
 public class Food implements PricedItem<Integer> {
     private final String name;
     private final String description;
